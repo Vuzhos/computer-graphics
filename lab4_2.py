@@ -104,7 +104,7 @@ def scene(n=30, m=30, r=2):
 
 if __name__ == '__main__':
     glutInit(sys.argv)
-    glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB)
+    glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH)
     glutInitWindowSize(W, H)
     glutInitWindowPosition(0, 0)
     glutCreateWindow(b"lab4")

@@ -109,7 +109,7 @@ def reshape(w, h):
 
 if __name__ == '__main__':
     glutInit(sys.argv)
-    glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB)
+    glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH)
     glutInitWindowSize(W, H)
     glutCreateWindow(b'lab4')
     

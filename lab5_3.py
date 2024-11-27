@@ -72,10 +72,6 @@ def mirror(type):
     glEnd()
 
 def display():
-    glClearColor(1, 1, 1, 0.0)
-    glEnable(GL_STENCIL_TEST)
-    glEnable(GL_DEPTH_TEST)
-
     glClearStencil(0)
     glClear(GL_COLOR_BUFFER_BIT)
     glMatrixMode(GL_MODELVIEW)
@@ -112,10 +108,16 @@ if __name__ == '__main__':
     glutInitWindowPosition(0, 0)
     glutCreateWindow(b'lab5')
     
+    glClearColor(1, 1, 1, 0.0)
+    glEnable(GL_STENCIL_TEST)
+    glEnable(GL_DEPTH_TEST)
+    
     glMatrixMode(GL_PROJECTION)
     glLoadIdentity()
     gluPerspective(60.0, W / H, 1.0, 30.0)
     glMatrixMode(GL_MODELVIEW)
+    
+    
     
     glutDisplayFunc(display)
     glutKeyboardFunc(keyboard)

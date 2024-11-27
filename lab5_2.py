@@ -73,12 +73,9 @@ def mirror(type):
     glEnd()
 
 def display():
-    glClearColor(1, 1, 1, 0.0)
-    glEnable(GL_STENCIL_TEST)
-    glEnable(GL_DEPTH_TEST)
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)
 
     glClearStencil(0)
-    glClear(GL_COLOR_BUFFER_BIT)
     glMatrixMode(GL_MODELVIEW)
     glLoadIdentity()
     glTranslatef(0.0, 0.0, -9.0)
@@ -109,6 +106,10 @@ if __name__ == '__main__':
     glutInitWindowSize(W, H)
     glutInitWindowPosition(0, 0)
     glutCreateWindow(b'lab5')
+    
+    glClearColor(1, 1, 1, 0.0)
+    glEnable(GL_STENCIL_TEST)
+    glEnable(GL_DEPTH_TEST)
     
     glMatrixMode(GL_PROJECTION)
     glLoadIdentity()
